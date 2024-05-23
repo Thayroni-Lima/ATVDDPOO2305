@@ -39,4 +39,12 @@ public abstract class Veiculo {
     public LocalDateTime getHoraSaida() {
         return horaSaida;
     }
+
+    public void setHoraEntrada(LocalDateTime horaEntrada) {
+        this.horaEntrada = horaEntrada;
+    }
+
+    public void setHoraSaida(LocalDateTime horaSaida) {
+        this.horaSaida = horaSaida;
+    }
 }

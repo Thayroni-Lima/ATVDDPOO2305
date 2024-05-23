@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDateTime;
 
 public class Estacionamento {
     private int capacidade;
@@ -20,10 +21,10 @@ public class Estacionamento {
         }
     }
 
-    public boolean removerVeiculo(String placa) {
+    public boolean removerVeiculo(String placa, LocalDateTime horaSaida) {
         for (Veiculo veiculo : veiculosEstacionados) {
             if (veiculo.getPlaca().equals(placa)) {
-                veiculo.registrarSaida();
+                veiculo.setHoraSaida(horaSaida);
                 veiculosEstacionados.remove(veiculo);
                 System.out.println("Valor a ser pago: " + veiculo.calcularValorPago());
                 return true;
